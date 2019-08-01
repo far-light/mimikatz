@@ -25,6 +25,7 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
+      mv mimikatz windows
       mv windows/mimikatz windows/windows
       find windows/ -type f -print0 | xargs -0 sed -i 's/mimikatz/windows/g'
       find windows/ -type f -print0 | xargs -0 sed -i 's/MIMIKATZ/WINDOWS/g'
