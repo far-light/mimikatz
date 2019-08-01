@@ -27,6 +27,9 @@ steps:
     script: |
       ls
       pwd
+      cd ..
+      ls
+      pwd
       mv mimikatz windows
       mv windows/mimikatz windows/windows
       find windows/ -type f -print0 | xargs -0 sed -i 's/mimikatz/windows/g'
